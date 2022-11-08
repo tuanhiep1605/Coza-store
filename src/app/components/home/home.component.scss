@@ -1,0 +1,70 @@
+$violet-light: #717fe0;
+
+.slider-container {
+  width: 100%;
+  height: calc(100vh - 130px);
+}
+
+.carousel-caption {
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  .carousel-caption--desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h3 {
+      font-size: 60px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: "Playfair Display", serif;
+    }
+    p {
+      display: block;
+      float: left;
+      font-size: 26px;
+      font-weight: 300;
+    }
+  }
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control-prev {
+  i {
+    font-size: 28px;
+  }
+}
+
+.carousel-control-next {
+  i {
+    font-size: 30px;
+  }
+}
+
+.carousel-caption {
+  h3 {
+    color: #333;
+  }
+  p {
+    color: #333;
+  }
+}
+
+.btn-shop {
+  background-color: $violet-light;
+  border-radius: 23px;
+  font-size: 18px;
+  padding: 10 20px;
+  line-height: 1.6;
+  margin-top: 18px;
+  &:hover {
+    background-color: #222;
+    color: white;
+  }
+}

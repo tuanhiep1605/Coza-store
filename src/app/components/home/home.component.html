@@ -1,0 +1,68 @@
+<div class="slider-container">
+  <div id="demo" class="carousel slide h-100" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner h-100">
+      <div class="carousel-item active h-100">
+        <img
+          src="https://technext.github.io/cozastore/images/slide-01.jpg"
+          alt="Los Angeles"
+          width="1100"
+          height="500"
+        />
+        <div class="carousel-caption">
+          <div class="carousel-caption--desc">
+            <p>Women Collection 2022</p>
+            <h3>NEW SEASON</h3>
+            <a [routerLink]="['/products']">
+              <button class="btn btn-shop">Shop Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item h-100">
+        <img
+          src="https://technext.github.io/cozastore/images/slide-02.jpg"
+          alt="Chicago"
+          width="1100"
+          height="500"
+        />
+        <div class="carousel-caption">
+          <div class="carousel-caption--desc">
+            <p>Man Collection 2022</p>
+            <h3>NEW ARRIVALS</h3>
+            <a [routerLink]="['/products']">
+              <button class="btn btn-shop">Shop Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item h-100">
+        <img
+          src="https://technext.github.io/cozastore/images/slide-03.jpg"
+          alt="New York"
+          width="1100"
+          height="500"
+        />
+        <div class="carousel-caption">
+          <div class="carousel-caption--desc">
+            <p>Man Collection 2022</p>
+            <h3>NEW ARRIVALS</h3>
+            <a [routerLink]="['/products']">
+              <button class="btn btn-shop">Shop Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <i class="fa-solid fa-chevron-left text-secondary"></i>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <i class="fa-solid fa-chevron-right text-secondary"></i>
+    </a>
+  </div>
+</div>

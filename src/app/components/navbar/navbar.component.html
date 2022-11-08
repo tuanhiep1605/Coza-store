@@ -1,0 +1,86 @@
+<div class="header__area">
+  <div class="top-header__area">
+    <div class="container-xl h-100">
+      <div class="row h-100">
+        <div class="col-6 h-100">
+          <div class="h-100 top-header__left">
+            <a href="#" class="mr-4"
+              ><i class="fa-solid fa-phone mr-2"></i
+              ><span> (123) 456-789-1230 </span></a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-envelope mr-2"></i>
+              <span>Cozastore@gmail.com</span></a
+            >
+          </div>
+        </div>
+        <div class="col-6 h-100">
+          <div class="top-header__social h-100 top-header__right">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <div class="h-100">
+              <a [routerLink]="['/login']">
+                <button class="btn btn__login">Login</button>
+              </a>
+              <a class="" [routerLink]="['/register']">
+                <button class="btn btn__signup">Signup</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-header__area shadow rounded">
+    <div class="container-xl">
+      <div class="main-header__content">
+        <a href="#" class="main-header__logo">
+          <img
+            src="https://technext.github.io/cozastore/images/icons/logo-01.png"
+            alt="Coza Store logo"
+            class="navbar-brand--logo"
+          />
+        </a>
+
+        <!-- Main header menu for Desktop start -->
+        <div class="main-header__menu">
+          <ul class="main-header__navbar">
+            <li routerLinkActive="active">
+              <a [routerLink]="['/home']">Home</a>
+            </li>
+            <li routerLinkActive="active">
+              <a [routerLink]="['/products']">Shop</a>
+            </li>
+            <li>
+              <a [routerLink]="['/feature']" routerLinkActive="active">
+                Feature
+              </a>
+            </li>
+            <li>
+              <a href="">Blog</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Main header menu for Desktop end -->
+
+        <div class="main-header__cart">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <!-- Main header-menu for Tablet start -->
+        <div class="main-header__sidebar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- Main header-menu for Tablet end -->
+      </div>
+    </div>
+  </div>
+</div>
