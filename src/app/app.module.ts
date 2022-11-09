@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptor } from './auth.interceptor';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AuthInterceptor } from './auth.interceptor';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,10 @@ import { AuthInterceptor } from './auth.interceptor';
       {
         path: 'register',
         component: RegisterComponent,
+      },
+      {
+        path: 'profile/:id',
+        component: ProfileComponent,
       },
     ]),
   ],
