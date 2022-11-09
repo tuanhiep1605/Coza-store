@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,6 +16,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 
+import { AuthInterceptor } from './auth.interceptor';
+import { ProfileComponent } from './components/profile/profile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +29,14 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+
     RouterModule.forRoot([
       {
         path: '',
@@ -57,9 +64,19 @@ import { FormsModule } from '@angular/forms';
         path: 'register',
         component: RegisterComponent,
       },
+      {
+        path: 'profile/:id',
+        component: ProfileComponent,
+      },
     ]),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

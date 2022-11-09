@@ -21,10 +21,28 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <div class="h-100">
               <a [routerLink]="['/login']">
-                <button class="btn btn__login">Login</button>
+                <button class="btn btn__login" *ngIf="!authServices.isLogIn()">
+                  Login
+                </button>
               </a>
               <a class="" [routerLink]="['/register']">
-                <button class="btn btn__signup">Signup</button>
+                <button class="btn btn__signup" *ngIf="!authServices.isLogIn()">
+                  Signup
+                </button>
+              </a>
+              <a class="" [routerLink]="['/profile/1']">
+                <button class="btn btn__signup" *ngIf="authServices.isLogIn()">
+                  My Account
+                </button>
+              </a>
+              <a class="" [routerLink]="['/home']">
+                <button
+                  class="btn btn__signup"
+                  *ngIf="authServices.isLogIn()"
+                  (click)="authServices.logout()"
+                >
+                  Logout
+                </button>
               </a>
             </div>
           </div>
