@@ -12,6 +12,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -40,6 +43,11 @@ import { HomeComponent } from './components/home/home.component';
       {
         path: 'products',
         component: ProductsComponent,
+      },
+
+      {
+        path :'detail-product/:id',
+        component:DetailProductComponent,
       },
       {
         path: 'login',
