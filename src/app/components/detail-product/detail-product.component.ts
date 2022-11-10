@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from 'src/app/service/product.service';
+
+import { Subject } from 'rxjs';
+import { Product, ProductsService } from 'src/app/services/products.service';
+
 
 @Component({
   selector: 'app-detail-product',
@@ -8,6 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./detail-product.component.scss'],
 })
 export class DetailProductComponent implements OnInit {
+
   product: any;
   rate: number = 0;
   isReadonly = true;
@@ -34,6 +38,7 @@ export class DetailProductComponent implements OnInit {
 
   btnIncrease(eventObj: any) {
     this.counter += 1;
+
   }
 
   btnMinus() {
