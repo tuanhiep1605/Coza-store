@@ -14,7 +14,6 @@ import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
-import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { AboutComponent } from './components/about/about.component';
@@ -80,10 +79,10 @@ import { ProfileComponent } from './components/profile/profile.component';
       {
         path: 'about',
         component: AboutComponent,
-
+      },
+      {
         path: 'profile/:id',
         component: ProfileComponent,
-
       },
     ]),
     RatingModule.forRoot(),

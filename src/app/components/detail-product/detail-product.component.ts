@@ -4,14 +4,12 @@ import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { Product, ProductsService } from 'src/app/services/products.service';
 
-
 @Component({
   selector: 'app-detail-product',
   templateUrl: './detail-product.component.html',
   styleUrls: ['./detail-product.component.scss'],
 })
 export class DetailProductComponent implements OnInit {
-
   product: any;
   rate: number = 0;
   isReadonly = true;
@@ -20,12 +18,12 @@ export class DetailProductComponent implements OnInit {
   counter: number = 1;
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductsService
   ) {}
 
   ngOnInit(): void {
     let id = this.activatedRoute.snapshot.params['id'];
-    this.productService.getProduct(id).subscribe(
+    this.productService.getProductById(id).subscribe(
       (res: any) => {
         this.product = res;
         this.rate = this.product.rating.rate.toFixed();
@@ -38,7 +36,6 @@ export class DetailProductComponent implements OnInit {
 
   btnIncrease(eventObj: any) {
     this.counter += 1;
-
   }
 
   btnMinus() {
