@@ -16,12 +16,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { ContactComponent } from './components/contact/contact.component';
-import { RatingModule } from 'ngx-bootstrap/rating';
 import { AboutComponent } from './components/about/about.component';
 
 import { AuthInterceptor } from './auth.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
-
 
 @NgModule({
   declarations: [
@@ -77,7 +75,6 @@ import { ProfileComponent } from './components/profile/profile.component';
         component: RegisterComponent,
       },
       {
-
         path: 'contact',
         component: ContactComponent,
       },
@@ -89,7 +86,6 @@ import { ProfileComponent } from './components/profile/profile.component';
         path: 'profile/:id',
         component: ProfileComponent,
       },
-
     ]),
     RatingModule.forRoot(),
   ],

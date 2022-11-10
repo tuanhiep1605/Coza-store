@@ -20,7 +20,6 @@
     "@angular/platform-browser-dynamic": "~11.2.14",
     "@angular/router": "~11.2.14",
     "bootstrap": "^4.6.2",
-
     "ngx-bootstrap": "^9.0.0",
     "jsonwebtoken": "^8.5.1",
     "rxjs": "~6.6.0",
