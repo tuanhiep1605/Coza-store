@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import url("../src/app/app.component.scss");
 
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

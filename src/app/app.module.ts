@@ -14,6 +14,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { ContactComponent } from './components/contact/contact.component';
+import { RatingModule } from 'ngx-bootstrap/rating';
+import { AboutComponent } from './components/about/about.component';
 
 import { AuthInterceptor } from './auth.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -28,13 +32,16 @@ import { ProfileComponent } from './components/profile/profile.component';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent,
+    ContactComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
+    RatingModule.forRoot(),
+
     RouterModule.forRoot([
       {
         path: '',
@@ -55,6 +62,10 @@ import { ProfileComponent } from './components/profile/profile.component';
         component: DetailProductComponent,
       },
       {
+        path: 'products/:id',
+        component: DetailProductComponent,
+      },
+      {
         path: 'login',
         component: LoginComponent,
       },
@@ -63,10 +74,19 @@ import { ProfileComponent } from './components/profile/profile.component';
         component: RegisterComponent,
       },
       {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+
         path: 'profile/:id',
         component: ProfileComponent,
+
       },
     ]),
+    RatingModule.forRoot(),
   ],
   providers: [
     {
