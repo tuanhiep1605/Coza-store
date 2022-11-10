@@ -1,0 +1,91 @@
+.img {
+  height: auto;
+  width: 400px;
+  background-image: red;
+
+  padding: 10px;
+}
+.container-xl {
+  margin-top: 50px;
+}
+.quatity {
+  display: flex;
+  align-items: center;
+}
+.btn-light {
+  height: 45px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #717fe0;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 23px;
+}
+.btn-light:hover {
+  background-color: black;
+  color: white;
+}
+.title {
+  font-size: 30px;
+  color: #333;
+  font-family: verdana;
+}
+.category,
+.description {
+  font-size: 15px;
+}
+.price {
+  font-size: 20px;
+  font-weight: 400;
+}
+.soluong {
+  text-align: center;
+  width: 50px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  height: 40px;
+  color: #666;
+}
+
+.cong,
+.tru {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 16px;
+  &:hover {
+    background-color: #717fe0;
+
+    color: white;
+  }
+}
+
+.checked {
+  color: orange;
+}
+.row {
+  padding: 50px;
+}
+
+.rate {
+  font-size: 15px;
+}
+.star {
+  padding-bottom: 10px;
+}
+.sao {
+  font-size: 20px;
+}
+@media only screen and (max-width: 450px) {
+  .img {
+    width: 250px;
+    height: auto;
+  }
+}

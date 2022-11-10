@@ -1,1 +1,46 @@
-<p>Update 2 detail-product works!</p>
+<div class="container-xl">
+  <div class="row">
+    <div class="col-sm">
+      <img class="img" src="{{ product?.image }}" alt="" />
+    </div>
+
+    <div class="col-sm">
+      <p class="title">{{ product?.title }}</p>
+      <div class="star">
+        <span class="rate">
+          <i>{{ product?.rating.rate }} </i>
+        </span>
+        <rating
+          class="sao"
+          [(ngModel)]="rate"
+          [max]="max"
+          [readonly]="isReadonly"
+        ></rating>
+
+        <span> | {{ product?.rating.count }} Evaluate</span>
+        <span> | 2.7k Sold</span>
+      </div>
+      <p class="price">
+        <strong> ${{ product?.price }}</strong>
+      </p>
+
+      <p class="description">Description: {{ product?.description }}</p>
+      <p class="category">
+        Category:
+        <a href=""
+          ><i>{{ product?.category }}</i></a
+        >
+      </p>
+
+      <div class="quantity">
+        <button class="tru" (click)="btnMinus()">-</button>
+        <input class="soluong" min="0" value="{{ counter }}" />
+        <button class="cong" (click)="btnIncrease($event)">+</button>
+      </div>
+
+      <button class="btn btn-light">
+        <i style="margin-right: 5px" class="bi bi-cart-fill"></i> Add to cart
+      </button>
+    </div>
+  </div>
+</div>
