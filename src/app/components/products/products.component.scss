@@ -21,10 +21,8 @@ p>a:hover{
     transform: scale(1.1);
     transition: all linear 0.3s;
 }
-.image-product:hover{
-
-    
-    
+.product{
+    width: 50%;
 }
 
 //side bar
@@ -94,6 +92,11 @@ a{
     background-size: 14px;
     transition: all 0.3s ease-in-out;
 }
+.image-product{
+    width: 100%;
+    height: auto;
+}
+
 
 
 .sidebar-left .sidebar-menu li.has-child.menu-open > a .icon{

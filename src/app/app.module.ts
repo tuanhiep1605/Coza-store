@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 
 import { AuthInterceptor } from './auth.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
