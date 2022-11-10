@@ -17,6 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { ContactComponent } from './components/contact/contact.component';
+import { BlogComponent } from './components/blog/blog.component';
 import { AboutComponent } from './components/about/about.component';
 
 import { AuthInterceptor } from './auth.interceptor';
@@ -34,8 +35,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     RegisterComponent,
 
     ContactComponent,
-
     AboutComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,12 +80,16 @@ import { ProfileComponent } from './components/profile/profile.component';
         component: ContactComponent,
       },
       {
-        path: 'about',
-        component: AboutComponent,
+        path: 'blog',
+        component: BlogComponent,
       },
       {
         path: 'profile/:id',
         component: ProfileComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
       },
     ]),
   ],
