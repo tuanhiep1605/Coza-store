@@ -41,7 +41,6 @@ import { ProfileComponent } from './components/profile/profile.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RatingModule.forRoot(),
 
     RouterModule.forRoot([
       {
@@ -87,7 +86,6 @@ import { ProfileComponent } from './components/profile/profile.component';
         component: ProfileComponent,
       },
     ]),
-    RatingModule.forRoot(),
   ],
   providers: [
     {
