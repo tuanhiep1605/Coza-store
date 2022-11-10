@@ -178,6 +178,159 @@ $violet-light: #717fe0;
   }
 }
 
+.cart-area {
+  position: fixed;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.activeCart {
+  right: 0 !important;
+}
+
+.cart-active__container {
+  right: 0 !important;
+  transition: all 0.4s;
+}
+
+.hide-cart {
+  width: 100%;
+  height: 100vh;
+}
+
+.cart-container {
+  position: fixed;
+  color: black;
+  top: 0;
+  right: -100%;
+  width: 390px;
+  height: 100vh;
+  padding: 40px 25px 20px 65px;
+  background-color: white;
+  transition: all 0.4s;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  i {
+    font-size: 28px;
+    color: #333;
+    &:hover {
+      cursor: pointer;
+      color: #888;
+    }
+  }
+}
+
+.cart-content {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.cart-content--list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.cart-content--feature {
+  span {
+    padding: 40px 0;
+    display: block;
+  }
+}
+
+.cart-content--btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.check-out__cart--btn,
+.view__cart--btn {
+  background-color: #222;
+  border-radius: 20px;
+  color: white;
+  padding: 0 15px;
+  min-width: 140px;
+  height: 40px;
+  &:hover {
+    background-color: $violet-light;
+    color: white;
+  }
+}
+
+.cart-list__item {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow: hidden;
+  &__picture {
+    width: 60px;
+    margin-right: 20px;
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    span {
+      color: #555;
+      font-size: 14px;
+    }
+  }
+}
+
+.cart-item--title {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  color: #555;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: $violet-light;
+  }
+}
+
 .active {
   a {
     color: $violet-light;

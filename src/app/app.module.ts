@@ -14,7 +14,6 @@ import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
-import { FormsModule } from '@angular/forms';
 
 import { AuthInterceptor } from './auth.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -53,8 +52,8 @@ import { ProfileComponent } from './components/profile/profile.component';
       },
 
       {
-        path :'detail-product/:id',
-        component:DetailProductComponent,
+        path: 'detail-product/:id',
+        component: DetailProductComponent,
       },
       {
         path: 'login',

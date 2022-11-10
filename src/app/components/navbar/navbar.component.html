@@ -90,7 +90,7 @@
 
         <div class="main-header__cart">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-cart-shopping" (click)="selectedTab()"></i>
         </div>
 
         <!-- Main header-menu for Tablet start -->
@@ -98,6 +98,76 @@
           <i class="fa-solid fa-bars"></i>
         </div>
         <!-- Main header-menu for Tablet end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Start Cart area -->
+<div class="cart-area">
+  <div class="hide-cart" (click)="closeTab()"></div>
+  <div class="cart-container">
+    <div class="cart-header">
+      <h3 class="cart-header--title">Your Cart:</h3>
+      <i class="fa-solid fa-xmark" (click)="closeTab()"></i>
+    </div>
+    <div class="cart-content">
+      <ul class="cart-content--list">
+        <li class="cart-list__item">
+          <div class="cart-item">
+            <div class="cart-item__picture">
+              <img
+                src="https://technext.github.io/cozastore/images/item-cart-01.jpg"
+                alt=""
+              />
+            </div>
+            <div class="cart-item__info">
+              <a class="cart-item--title">White Shirt Pleat</a>
+              <span class="cart-item--cost">$19.00</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="cart-list__item">
+          <div class="cart-item">
+            <div class="cart-item__picture">
+              <img
+                src="https://technext.github.io/cozastore/images/item-cart-02.jpg"
+                alt=""
+              />
+            </div>
+            <div class="cart-item__info">
+              <a class="cart-item--title"> Converse All Star </a>
+              <span class="cart-item--cost">$19.00</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="cart-list__item">
+          <div class="cart-item">
+            <div class="cart-item__picture">
+              <img
+                src="https://technext.github.io/cozastore/images/item-cart-03.jpg"
+                alt=""
+              />
+            </div>
+            <div class="cart-item__info">
+              <a class="cart-item--title"> Nixon Porter Leather </a>
+              <span class="cart-item--cost">$19.00</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="cart-content--feature">
+        <span>Total: $75.00</span>
+        <div class="cart-content--btn">
+          <a href="">
+            <button class="view__cart--btn btn">VIEW CART</button>
+          </a>
+          <a href="">
+            <button class="check-out__cart--btn btn">CHECK OUT</button>
+          </a>
+        </div>
       </div>
     </div>
   </div>
