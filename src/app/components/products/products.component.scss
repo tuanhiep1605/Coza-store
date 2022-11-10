@@ -108,3 +108,17 @@ a{
     
     text-transform: capitalize;
 }
+
+
+@media only screen and (max-width: 820px) {
+    .hide-sidebar{
+        display: none;
+    }
+
+    .full-content{
+        display: flex;
+	    flex-direction: column;
+        width: 100%;
+    }
+    
+  }
