@@ -12,6 +12,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HomeComponent } from './components/home/home.component';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,10 @@ import { HomeComponent } from './components/home/home.component';
       {
         path: 'register',
         component: RegisterComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
       },
     ]),
   ],
