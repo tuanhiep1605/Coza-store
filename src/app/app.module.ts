@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+
 import { RatingModule } from 'ngx-bootstrap/rating';
 
 import { AppComponent } from './app.component';
@@ -22,6 +22,7 @@ import { AboutComponent } from './components/about/about.component';
 
 import { AuthInterceptor } from './auth.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

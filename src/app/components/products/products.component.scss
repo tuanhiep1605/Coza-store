@@ -1,9 +1,9 @@
 p {
     
-    width: 275px;
+    width: 100%px;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 25px;
+    line-height: 22px;
     -webkit-line-clamp: 1;
     height: 20px;
      display: -webkit-box;
@@ -21,11 +21,15 @@ p>a:hover{
     transform: scale(1.1);
     transition: all linear 0.3s;
 }
-.image-product:hover{
-
-    
-    
+.infor-product{
+   width: 170px;
 }
+
+.product{
+    margin-top:3px;
+    margin-bottom: 5px;
+    padding: 30px;
+ }
 
 //side bar
 *{
@@ -38,47 +42,34 @@ a{
     text-decoration: none;
 }
 .sidebar-left {
-    background-color: #f9fafb;
-    border-radius: 5px;
+   
     padding: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    
 }
 
-.sidebar-left .title-sidebar {
-    color: #333;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: bold;
-    margin: 0 0 15px;
-}
-
-
-
-.sidebar-left .sidebar-menu{
-    list-style: none;
-}
 .sidebar-left .sidebar-menu li{
     display: block;
 }
 .sidebar-left .sidebar-menu li a{
     display: block;
     font-size: 16px;
-    line-height: 1.2;
+    opacity: 80%;
     text-decoration: none;
     padding: 5px 0;
-    position: relative;
-    color: #333;
+    color: rgb(60, 58, 58);
+    
 }
 .sidebar-left .sidebar-menu li a:hover{
-    color: #a53b31;
-    font-size: 18px;
-}
-.sidebar-left .sidebar-menu li ul{
-    padding-left: 20px;
-    list-style: none;
+    color: rgb(4, 4, 4);
+    border-bottom: 1px solid black;
 }
 
+
 .sidebar-left .sidebar-menu li ul{
-    padding-left: 20px;
+    padding: 20px;
     list-style: none;
     display: none;
 }
@@ -94,6 +85,13 @@ a{
     background-size: 14px;
     transition: all 0.3s ease-in-out;
 }
+.image-product{
+    width: 200px;
+    height: auto;
+    
+    
+}
+
 
 
 .sidebar-left .sidebar-menu li.has-child.menu-open > a .icon{
@@ -111,7 +109,7 @@ a{
 
 
 @media only screen and (max-width: 820px) {
-    .hide-sidebar{
+    .hide-element{
         display: none;
     }
 
@@ -121,4 +119,24 @@ a{
         width: 100%;
     }
     
+  }
+
+  // search
+
+  input{
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    box-sizing: border-box;
+    transition: .5s;
+  }
+  input[type="text"]{
+    background: #efefef;
+    width: 312px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+    opacity: 50%;
   }
