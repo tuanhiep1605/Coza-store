@@ -260,3 +260,11 @@ span {
     margin-right: 20px;
   }
 }
+
+// CSS for Home page
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-control--hidden {
+    display: none;
+  }
+}
