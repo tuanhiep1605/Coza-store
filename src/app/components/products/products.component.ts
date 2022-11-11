@@ -81,15 +81,15 @@ export class ProductsComponent implements OnInit {
         let i=0;
         let arr :Product[] =[];
         if(page===1){
-          arr  = res.filter(item => item.id <=10);
+          arr  = res.filter(item => item.id <=8);
         }
         if(page===2){
-          arr  = res.filter(item => item.id <=20);
-          arr= arr.slice(10);
+          arr  = res.filter(item => item.id <=16);
+          arr= arr.slice(8);
         }
         if(page===3){
-          arr  = res.filter(item => item.id <=30);
-          arr= arr.slice(20);
+          arr  = res.filter(item => item.id <=24);
+          arr= arr.slice(16);
         }
         console.log("item:",arr );
           while (this.products.length) {
