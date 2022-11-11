@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { RatingModule } from 'ngx-bootstrap/rating';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,6 +15,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+
+import { ContactComponent } from './components/contact/contact.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { AboutComponent } from './components/about/about.component';
 
 import { AuthInterceptor } from './auth.interceptor';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -29,14 +34,17 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent,
+
+    ContactComponent,
+    AboutComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
-
+    RatingModule.forRoot(),
     RouterModule.forRoot([
       {
         path: '',
@@ -57,6 +65,10 @@ import { FormsModule } from '@angular/forms';
         component: DetailProductComponent,
       },
       {
+        path: 'products/:id',
+        component: DetailProductComponent,
+      },
+      {
         path: 'login',
         component: LoginComponent,
       },
@@ -65,8 +77,20 @@ import { FormsModule } from '@angular/forms';
         component: RegisterComponent,
       },
       {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'blog',
+        component: BlogComponent,
+      },
+      {
         path: 'profile/:id',
         component: ProfileComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
       },
     ]),
   ],

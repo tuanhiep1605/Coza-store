@@ -6,9 +6,10 @@ import { Product, ProductsService } from 'src/app/services/products.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
+
   products1:Product[]=[];
 
   categorys:any;
@@ -80,15 +81,15 @@ export class ProductsComponent implements OnInit {
         let i=0;
         let arr :Product[] =[];
         if(page===1){
-          arr  = res.filter(item => item.id <=9);
+          arr  = res.filter(item => item.id <=10);
         }
         if(page===2){
-          arr  = res.filter(item => item.id <=18);
-          arr= arr.slice(9);
+          arr  = res.filter(item => item.id <=20);
+          arr= arr.slice(10);
         }
         if(page===3){
-          arr  = res.filter(item => item.id <=27);
-          arr= arr.slice(18);
+          arr  = res.filter(item => item.id <=30);
+          arr= arr.slice(20);
         }
         console.log("item:",arr );
           while (this.products.length) {
@@ -107,5 +108,6 @@ export class ProductsComponent implements OnInit {
     }
     );
   }
+
 
 }
