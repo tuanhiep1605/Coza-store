@@ -10,20 +10,8 @@
   display: flex;
 }
 
-// .img-contact {
-
-//   height: 250px;
-//   background-size: cover;
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   text-align: center;
-//   align-items: center;
-//   justify-content: center;
-//   display: flex;
-// }
-
 .text-blog {
-  font-family: Poppins-Bold;
+  font-family: "Poppins", sans-serif;
   font-size: 50px;
   line-height: 1.1;
 
@@ -36,7 +24,7 @@
   border-style: none;
 }
 .title {
-  font-family: Poppins-Bold;
+  font-family: "Poppins", sans-serif;
   font-size: 26px;
   line-height: 1.3846;
   font-weight: 900;
@@ -81,7 +69,7 @@
   color: #aaa;
 }
 .category {
-  font-family: Poppins-Bold;
+  font-family: "Poppins", sans-serif;
   font-size: 22px;
   line-height: 1.333333;
   font-weight: bold;

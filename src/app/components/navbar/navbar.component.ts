@@ -9,12 +9,6 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavbarComponent implements OnInit {
   constructor(public authServices: AuthService) {}
 
-  // openCart = 'close';
-  // selectedCart(value: any) {
-  //   console.log(value);
-  //   this.openCart = value;
-  // }
-
   selectedNavTab: any;
 
   selectedTab() {
@@ -31,6 +25,38 @@ export class NavbarComponent implements OnInit {
     document
       .getElementsByClassName('cart-container')[0]
       .classList.remove('cart-active__container');
+  }
+
+  //Function for Header mune in Mobie
+  openMenu() {
+    document
+      .getElementsByClassName('menu-mobie')[0]
+      .classList.add('active-menu');
+    document
+      .getElementsByClassName('menu-mobie')[0]
+      .classList.remove('close-menu');
+    document.getElementsByClassName('menu-bars')[0].classList.add('close-menu');
+    document
+      .getElementsByClassName('menu-close')[0]
+      .classList.add('active-menu');
+  }
+
+  closeMenu() {
+    document
+      .getElementsByClassName('menu-mobie')[0]
+      .classList.add('close-menu');
+    document
+      .getElementsByClassName('menu-mobie')[0]
+      .classList.remove('active-menu');
+    document
+      .getElementsByClassName('menu-bars')[0]
+      .classList.add('active-menu');
+    document
+      .getElementsByClassName('menu-bars')[0]
+      .classList.remove('close-menu');
+    document
+      .getElementsByClassName('menu-close')[0]
+      .classList.remove('active-menu');
   }
 
   ngOnInit(): void {}

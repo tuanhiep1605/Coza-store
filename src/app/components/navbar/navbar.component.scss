@@ -4,6 +4,7 @@ $gray-light: #afb4bf;
 $violet-light: #717fe0;
 
 // CSS top header
+
 .top-header__area {
   height: 50px;
   width: 100%;
@@ -11,15 +12,6 @@ $violet-light: #717fe0;
   display: flex;
   align-items: center;
 }
-
-// .main-header__area {
-//   background-color: white;
-//   position: fixed;
-//   top: 50px;
-//   left: 0;
-//   right: 0;
-//   z-index: 100;
-// }
 
 .top-header__area a {
   color: white;
@@ -337,7 +329,88 @@ $violet-light: #717fe0;
   }
 }
 
+// CSS Menu mobie
+.menu-mobie {
+  display: none;
+}
+
 //CSS start for tables
+@media only screen and (max-width: 768px) {
+  .top-header__area {
+    display: none;
+  }
+
+  .main-header__menu {
+    display: none;
+  }
+
+  .main-header__cart {
+    i {
+      display: inline-block;
+      margin-left: 10px;
+      color: $gray-dark;
+      font-size: 26px;
+      padding: 0 10px;
+      :last-child {
+        padding: 0 0 0 10px;
+      }
+      &:hover {
+        transition: all linear 0.3s;
+        cursor: pointer;
+        color: $violet-light;
+      }
+    }
+  }
+
+  .main-header__sidebar {
+    display: inline-block;
+    .menu-close {
+      display: none;
+    }
+
+    .menu-close {
+      font-size: 36px;
+    }
+  }
+
+  //CSS Menu mobie
+  .header__area {
+    position: relative;
+  }
+
+  .menu-mobie {
+    background-color: $violet-light;
+    color: white;
+    width: 100%;
+    left: -100%;
+    z-index: 1001;
+  }
+
+  .menu-mobie__list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    li {
+      width: 100%;
+      a {
+        color: white;
+        font-size: 16px;
+        line-height: 2.8;
+        padding: 8px 20px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .active-menu {
+    display: block !important;
+  }
+
+  .close-menu {
+    display: none !important;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .top-header__area {
     display: none;
@@ -347,7 +420,69 @@ $violet-light: #717fe0;
     display: none;
   }
 
+  .main-header__cart {
+    i {
+      display: inline-block;
+      margin-left: 10px;
+      color: $gray-dark;
+      font-size: 26px;
+      padding: 0 10px;
+      :last-child {
+        padding: 0 0 0 10px;
+      }
+      &:hover {
+        transition: all linear 0.3s;
+        cursor: pointer;
+        color: $violet-light;
+      }
+    }
+  }
+
   .main-header__sidebar {
     display: inline-block;
+    .menu-close {
+      display: none;
+    }
+
+    .menu-close {
+      font-size: 36px;
+    }
+  }
+
+  //CSS Menu mobie
+  .header__area {
+    position: relative;
+  }
+
+  .menu-mobie {
+    background-color: $violet-light;
+    color: white;
+    width: 100%;
+    left: -100%;
+    z-index: 1001;
+  }
+
+  .menu-mobie__list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    li {
+      width: 100%;
+      a {
+        color: white;
+        font-size: 16px;
+        line-height: 2.8;
+        padding: 8px 20px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .active-menu {
+    display: block !important;
+  }
+
+  .close-menu {
+    display: none !important;
   }
 }
